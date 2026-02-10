@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ပုလဲသာမဏေကျော်အသင်း - တရားဝင်ဝဘ်ဆိုဒ်</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+  /* Icon လေးတွေ Website ရဲ့ ညာဘက်အောက်ထောင့်မှာ ကပ်နေဖို့ */
+  .floating-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+  }
+
+  .animated-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    /* အပေါ်အောက် ခုန်နေမယ့် Animation */
+    animation: icon-bounce 2s infinite ease-in-out;
+  }
+
+  /* Facebook အရောင် */
+  .fb-bg { background-color: #1877F2; }
+  /* Viber အရောင် */
+  .vb-bg { background-color: #7360f2; }
+
+  .animated-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Mouse တင်လိုက်ရင် ခုန်တာရပ်ပြီး နည်းနည်းကြီးလာမယ် */
+  .animated-icon:hover {
+    transform: scale(1.1);
+    animation-play-state: paused;
+  }
+
+  /* ခုန်တဲ့ ပုံစံကို သတ်မှတ်ခြင်း */
+  @keyframes icon-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+</style>
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ပုလဲသာမဏေကျော်အသင်း</div>
+        <ul class="nav-links">
+            <li><a href="#home">ပင်မစာမျက်နှာ</a></li>
+            <li><a href="#about">အကြောင်းအရာများ</a></li>
+            <li><a href="#founder">ဆရာတော်၏အတ္ထုပ္ပတ္တိ</a></li>
+            <li><a href="#donors">အလှူရှင်များ</a></li>
+            <li><a href="#cv-section">CV လျှောက်လွှာ</a></li>
+            <li><a href="#archive-section">အောင်စာရင်းမှတ်တမ်း</a></li>
+            <li><a href="#contact-section">ဆက်သွယ်ရန်</a></li>
+            <li><a href="#location">တည်နေရာ</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+
+ <img src="images/IMG_20251222_085043_980_1769965477094edit (1).png" alt="Left Logo" class="header-logo">       
+        
+ <div class="hero-content">
+
+            
+ <h2>နမော               တဿ              ဘဂဝတော              အရဟတော          သမ္မာသမ္ဓုဒ္ဓဿ။</h2>           
+            
+            <h1>ပုလဲသာမဏေကျော်အသင်း</h1>
+            <h2>မဟာမင်းထင်တိုက်၊ပုလဲသာမဏေကျော်စာသင်တိုက်</h2>
+            <p>မန္တလေးတိုင်း၊မဟာအောင်မြေမြို့နယ်၊သီတာအေး(၉၀၁)ရပ်ကွက်၊၇၈ လမ်း၊၄၄x၄၅ လမ်းကြား။</p>
+            <p>ပုလဲသာမဏေကျော်စာသင်တိုက်၏ ပဓာနနာယကဆရာတော် ဘဒ္ဒန္တပညာသိရီလင်္ကာရသည်</p>
+            <p>ဤ "ပုလဲသာမဏေကျော်အသင်း"ကို (၁၃၈၆)ခုနှစ်တွင် စတင်တည်ထောင်ခဲ့ပါသည်။</p>
+            <a href="#cv-section" class="btn-primary" style="width: auto; padding: 12px 30px;">CV လျှောက်ထားမည်</a>
+            
+        </div>
+ <img src="images/1770526076365.png" alt="Right Logo" class="header-logo">       
+    </header>
+
+    <section id="about" class="container">
+        <h2 class="title">ပုလဲသာမဏေကျော်အသင်း စာမေးပွဲအကြောင်း</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                        <p>-ပုလဲသာမဏေကျော်စာသင်တိုက် ပဓာနနာယကဆရာတော် ဘဒ္ဒန္တပညာသိရီလင်္ကာရသည် (၁၃၈၆)ခုနှစ်တွင် စတင်တည်ထောင်ခဲ့သော "ပုလဲသာမဏေကျော်အသင်း"ကို ပထမအကြိမ်အဖြင့် 
+                           သာသနာနှစ်(၂၅၆၉)ခုနှစ်၊ ကောဇာသက္ကရာဇ် (၁၃၈၇)ခုနှစ်၊ပြသိုလ်လဆန်း(၅)ရက်၊(၆)ရက်၊(၇)ရက်နေ့များ၌ (၃)ရက်တိတိ စတင်ကျင်းပခဲ့ပါသည်။
+                           ပထမအကြိမ်အဖြင့် စတင်ကျင်းပရာ၌ ဖြေဆိုရန် စာရင်းပေးသွင်းသည့်အရေအတွက်မှာ ()ပါးနှင့် လာရောက်ဖြေဆိုသူ ()ပါးရှိပြီးလျှင် အောင်မြင်သူ ()ပါးရှိခဲ့ပါသည်။
+                           စာအောင်ဆုနှင်းသဘင်ပွဲကိုလည်း ပြာသိုလ်လဆန်း(၈)ရက်နေ့နံနက် (၉)နာရီတွင် အောင်လက်မှတ်နှင့် စာအောင်ဆုတို့ကိုဆက်ကပ် လှူဒါန်းခဲ့ပါသည်။
+                           စာမေးပွဲ မဖြေဆိုမှီကာလမှစ၍ ဖြေဆိုစဉ်ကာလ,ဖြေဆိုပြီးကာလနှင့် စာဖြေသံဃာတော်များ မိမိတို့ဒေသအသီးသီးသို့ မပြန်ကြွသေးသော ကာလများ၌ တည်းခိုခြင်း,အာရုံဆွမ်းနှင့် နေ့ဆွမ်းဆက်ကပ်ခြင်းများကို 
+                           လိုလေသေးမရှိ ပြည့်စုံစွာ စီမံဆောင်ရွက်ပေးပါသည်။ပုလဲသာမဏေကျော်စာမေးပွဲကို နှစ်စဉ် ကျင်းပမည်ဖြစ်သောကြောင့် ဒေသအသီးသီးမှ စာဖြေသာမဏေများသည် ဤ "Website Cv Form" မှဖြစ်စေ,
+                           လူကိုယ်တိုင် လာရောက်၍ဖြစ်စေ ကြိုတင်စာရင်းပေးသွင်းနိုင်ပါသည်။ဆက်သွယ် အကြောင်းကြားခြင်းတို့ကို ပုလဲသာမဏေကျော်စာသင်တိုက် "Facebook Page chat box,Viber,Phone,
+                           Emailjs" တို့မှ ပြုလုပ်နိုင်ပါသည်။ ကျောင်းတိုက်နှင့် စာမေးပွဲအသင်းအတွက် လှူဒါန်းလိုပါကလည်း "ဆက်သွယ်လှူဒါန်းရန်" section ၌ ဖော်ပြထားပါသည်။
+                           ပုလဲသာမဏေကျော်အသင်း၏ ဩဝါဒါစရိယဆရာတော်များ,နာယကဆရာတော်များ,ပုစ္ဆက-စာစစ်ဆရာတော်များမှာ အောက်ပါအတိုင်းဖြစ်ပါသည်။
+                        </p>
+                <h1>ဩဝါဒါစရိယဆရာတော်များ</h1>
+                <p>၁။ ဘဒ္ဒန္တဝိလာသဂ္ဂ(တိုက်အုပ်ဆရာတော်)</p>
+                <p>၂။ ဘဒ္ဒန္တပညာဝံသ(ပုလဲဆရာတော်)</p>
+
+                <h1>နာယကဆရာတော်များ</h1>
+                <p>၁။ ဦးကုဏ္ဍလာလင်္ကာရာဘိဝံသ (မစိုးရိမ်တိုက်သစ်၊ ဓမ္မဝေဒဂူကျောင်း)</p>
+                <p>၂။ ဦးပါကဋာလင်္ကာရာဘိဝံသ (ဝဏ္ဏိတာရာမကျောင်းတိုက်၊ ရန်ကုန်)</p>
+                <p>၃။ ဦးဣန္ဒာစက္ကာလင်္ကာရာဘိဝံသ (ဇိနောဒယကျော်းတိုက်၊ ရန်ကုန်)</p>
+                <p>၄။ ဦးနန္ဒမဉ္ဇူလင်္ကာရ (ပါဠိတက္ကသိုလ်ညောင်တုန်းကျော်းတိုက်၊ ဗဟန်း၊ ရန်ကုန်)</p>
+                <p>၅။ ဦးပညာဓဇာလင်္ကာရ (ရတနာပုံကျောင်း၊ ရန်ကုန်)</p>
+
+                <h1>ပုစ္ဆက-စာစစ်ဆရာတော်များ</h1>
+                <p>(၁)ဦးကုဏ္ဍလာလင်္ကာရာဘိဝံသ (မစိုးရိမ်တိုက်သစ်၊ ဓမ္မဝေဒဂူကျောင်း)၊ (၂)ဦးပါကဋာလင်္ကာရာဘိဝံသ (ဝဏ္ဏိတာရာမကျောင်းတိုက်၊ ရန်ကုန်)၊
+                    (၃)ဦးဣန္ဒာစက္ကာလင်္ကာရာဘိဝံသ (ဇိနောဒယကျော်းတိုက်၊ ရန်ကုန်)၊ (၄)ဦးဝိလာသဂ္ဂါလင်္ကာရနှင့် စာချဆရာတော်များ (တိပိဋကဂန္ဓာရုံကျောင်း၊ ရန်ကုန်)၊
+                    (၅)ဦးစန္ဒိမာ (ငါးထပ်ကြီး၊ ရန်ကုန်)၊ (၆)ဦးသူရိယ (ရတနာကံလှကျောင်း၊ ရန်ကုန်)၊ 
+                    (၇)ဦးပညာသိရီလင်္ကာရ (မဟာမင်းထင်တိုက်၊ ပုလဲသာမဏေကျော်စာသင်တိုက်)၊(၈)ဦးတေဇာနန္ဒာလင်္ကာရ (မဟာမင်းထင်တိုက်၊ ပုလဲသာမဏေကျော်စာသင်တိုက်)၊ 
+                    (၉)ဦးပညာသီဟ (မဟာမင်းထင်တိုက်၊ ပုလဲသာမဏေကျော်စာသင်တိုက်)၊ (၁၀)ဦးပညာသာမိ (မိုးထားတိုက်၊ မှန်တန်းကျောင်း)။
+                </p>
+                
+                
+                
+            </div>
+            <div class="about-img">
+                <img src="images/IMG_20260112_170923.jpg" alt="Monastery" class="round-img">
+                <img src="images/MVIMG_20251224_092715.jpg" alt="monastery" class="round-img">
+                <img src="images/IMG_20251221_080656.jpg" alt="Monastery" class="round-img">
+                <img src="images/FB_IMG_1770604356387.jpg" alt="Monastery" class="round-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="founder" class="container dark-bg">
+        <h2 class="title">ပုလဲသာမဏေကျော်စာသင်တိုက်-ပဓာန နာယကဆရာတော်၏ အတ္ထုပ္ပတ္တိ</h2>
+        <div class="founder-flex">
+            <img src="images/FB_IMG_1770549544063.jpg" alt="Sayadaw" class="founder-img">
+            <div class="founder-bio">
+                
+                <h3>ဘွဲ့တော်အမည်= ဘဒ္ဒန္တပညာသိရီလင်္ကာရ</h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="donors" class="container">
+    <h2 class="title">အလှူရှင်များစာရင်း</h2>
+    <div class="table-responsive">
+        <table class="donor-table">
+            <thead>
+                <tr>
+                    <th>ရက်စွဲ</th>
+                    <th>အလှူရှင်အမည်</th>
+                    <th>အလှူငွေ/ပစ္စည်း</th>
+                    <th>မှတ်ချက်</th>
+                </tr>
+            </thead>
+            <tbody id="donor-data">
+                <tr><td colspan="4">အချက်အလက်များ ဆွဲယူနေပါသည်...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+    <section id="cv-section" class="container dark-bg">
+        <div class="form-card">
+            <div id="timer" style="color: #ec9c23; font-weight: bold; margin-bottom: 20px; font-size: 14px; background: #fff9f0; padding: 10px; border-radius: 8px; border: 1px dashed #ec9c23;"></div>
+            <div class="icon-box"><i class="fas fa-dharmachakra"></i></div>
+            <h2>ပုလဲသာမဏေကျော်အသင်း စာမေးပွဲဖြေဆိုရန် ဤ "CV FORM" မှတစ်ဆင့် ဖြည့်သွင်း ပေးပို့နိုင်ပါသည်။</h2>
+            
+            <form id="cv-form">
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-user-gradient"></i><input type="text" name="monk-name" placeholder="ဘွဲ့အမည်" required></div>
+                    <div class="input-group"><i class="fas fa-hourglass-half"></i><input type="text" name="age-vassa" placeholder="သက်တော်/ဝါတော်" required></div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-calendar-alt"></i><input type="date" name="dob" required></div>
+                    <div class="input-group"><i class="fas fa-user-friends"></i><input type="text" name="father-name" placeholder="ဖခင်အမည်" required></div>
+                </div>
+                <div class="input-group"><i class="fas fa-map-marker-alt"></i><input type="text" name="hometown" placeholder="နေရပ်လိပ်စာ (ဇာတိ)" required></div>
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-graduation-cap"></i><input type="text" name="past-exam" placeholder="အောင်မြင်ခဲ့သော အဆင့်,ခုံနံပါတ်,ခုနှစ်"></div>
+                    <div class="input-group"><i class="fas fa-book-reader"></i><input type="text" name="current-exam" placeholder="ဖြေဆိုမည့်အဆင့်" required></div>
+                </div>
+                <div class="input-group"><i class="fas fa-vihara"></i><input type="text" name="monastery-name" placeholder="လက်ရှိသီတင်းသုံးရာ ကျောင်းတိုက်အမည်" required></div>
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-map"></i><input type="text" name="state" placeholder="တိုင်း/ပြည်နယ်" required></div>
+                    <div class="input-group"><i class="fas fa-city"></i><input type="text" name="township" placeholder="မြို့နယ်" required></div>
+                </div>
+                <div class="input-group"><i class="fas fa-user-tie"></i><input type="text" name="head-monk-name" placeholder="ကျောင်းထိုင်ဆရာတော်ဘွဲ့အမည်"></div>
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-phone"></i><input type="tel" name="phone-number" placeholder="ဖုန်းနံပါတ်" required></div>
+                    <div class="input-group"><i class="fas fa-envelope"></i><input type="email" name="user-email" placeholder="အီးမေးလ်" required></div>
+                </div>
+                <div class="input-group"><i class="fas fa-comment-dots"></i><textarea name="user-message" placeholder="ဖြည့်စွက်ချက် (ရှိလျှင်)" rows="3"></textarea></div>
+                <button type="submit" id="cv-btn" class="btn-primary">CV တင်သွင်းမည်</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="archive-section" class="container dark-bg">
+    <h2 class="title">အောင်စာရင်းမှတ်တမ်းများ</h2>
+    
+    <div class="main-accordion">
+        <div class="accordion-item">
+            <input type="checkbox" id="acc-2024" class="acc-input">
+            <label for="acc-2024" class="acc-label">
+                <span><i class="fas fa-calendar-alt"></i> ၂၀၂၅ ခုနှစ် ပုလဲသာမဏေကျော်အသင်းစာမေးပွဲ အောင်စာရင်းများ</span>
+                <i class="fas fa-chevron-down arrow"></i>
+            </label>
+            <div class="acc-content">
+                <div class="download-grid">
+                    <div class="dl-card">
+                        <div class="info">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>ပထမအဆင့်</span>
+                        </div>
+                        <a href="https://docs.google.com/document/d/1SWz6MXQh5m3HKw12b6vxYsvV8ZBNaSR_/edit?usp=drive_link&ouid=115837646569759137794&rtpof=true&sd=true" target="_blank" class="dl-btn">Download</a>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+
+    <section id="contact-section" class="container">
+        <div class="main-container">
+            <div class="form-card">
+                <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
+                <h2>Contact Us</h2>
+                <h2>အကြံပြုစာလွှာ ပေးပို့နိုင်ပါသည်</h2>
+                <form id="contact-form">
+                    <div class="input-group"><i class="fas fa-at"></i><input type="email" name="user_email" placeholder="သင်၏ အီးမေးလ်" required></div>
+                    <div class="input-group"><i class="fas fa-comment-dots"></i><textarea name="message" placeholder="စာသားရိုက်ပါ..." rows="3" required></textarea></div>
+                    <button type="submit" id="contact-btn" class="btn-secondary">Email ပို့မည်</button>
+                </form>
+            </div>
+            
+            <div id="donation" class="form-card">
+                <div class="icon-box"><i class="fas fa-hand-holding-heart"></i></div>
+                <h2>ဆက်သွယ်လှူဒါန်းရန်</h2>
+                <div class="content-bank-info">
+                    
+                    
+                    <p><strong>KBZ Pay:</strong> <span class="copyable" onclick="copyText('09123456789')">09794048336</span></p><p><strong>(ASHIN PYIN NYAR THIRI LANKARA)</strong></p>
+                    
+                    <p><strong>KBZ Bank:</strong> <span class="copyable" onclick="copyText('1234567890001')">028 5110 280 1234 301</span></p><p><strong>(Ashin Pyinnyarthiri Lankara)</strong></p>
+                    <p style="margin-top:10px; color:#eb0f0f;">(ပုလဲသာမဏေကျော်စာသင်တိုက်)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="location" class="container">
+    <h2 class="title">ကျောင်းတိုက်တည်နေရာ</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29604.05551418527!2d96.06443703476559!3d21.953498699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6dcb22975b41%3A0x1a1d7abea98339ff!2z4YCV4YCv4YCc4YCy4YCV4YCb4YCf4YCt4YCQ4YCW4YCx4YCr4YCE4YC64YCS4YCx4YC44YCb4YC-4YCE4YC64YC4ICjhgJvhgK_hgLbhgLjhgIHhgLvhgK_hgJXhgLop!5e0!3m2!1sen!2smm!4v1770462298727!5m2!1sen!2smm"
+            width="50%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                Swal.fire('Copy ကူးပြီးပါပြီ', text, 'success');
+            });
+        }
+    </script>
+
+    <div class="floating-container">
+  <a href="https://www.facebook.com/share/1AUFYcPH37/" target="_blank" class="animated-icon fb-bg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+  </a>
+
+  <a href="viber://chat?number=+959423517860" class="animated-icon vb-bg">
+    <img src="https://cdn.worldvectorlogo.com/logos/viber-3.svg" alt="Viber">
+  </a>
+</div>
+
+
+          <h1 style="text-align:center; text-shadow: 1px 1px 2px brown, 0 0 25px burlywood, 0 0 5px darkblue;
+           color: darkgoldenrod;">ဗုဒ္ဓသာသနံ စိရံ တိဋ္ဌတု။ </h2>
+</body>
+</html>

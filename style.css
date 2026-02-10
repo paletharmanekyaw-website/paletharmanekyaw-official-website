@@ -1,0 +1,139 @@
+:root {
+    --maroon: #ec9c23;
+    --gold: #d4af37;
+    --white: #ffffff;
+    --dark: #097ff5;
+}
+
+/* ကွန်ပျူတာနဲ့ကြည့်ရင် Icon ကို ဖျောက်ထားမယ် */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ec9c23;
+}
+
+/* ဖုန်းနဲ့ကြည့်တဲ့အခါ (Screen size 768px ထက် သေးသွားရင်) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* ဘား ၃ ချောင်း Icon ပေါ်လာမယ် */
+    }
+
+    .nav-links {
+        display: none; /* မူလ Menu စာရင်းကို ဖျောက်ထားမယ် */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* JavaScript နဲ့ နှိပ်လိုက်ရင် ပေါ်လာစေဖို့ */
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pyidaungsu', sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: #f4f7f6; color: #1b1b22; }
+
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 5%; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky; top: 0; z-index: 1000;
+}
+.logo { color: var(--maroon); font-weight: bold; font-size: 1.2rem; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--maroon); font-weight: bold; font-size: 14px; transition: 0.3s; }
+.nav-links a:hover { color: var(--dark); }
+
+.hero {
+    height: 70vh; background: #068526;
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px; }
+
+.container { padding: 60px 10%; }
+.dark-bg { background: #f9f9f9; }
+.title { text-align: center; color: var(--maroon); margin-bottom: 40px; font-size: 2rem; }
+
+.about-grid, .founder-flex { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+.about-text, .founder-bio { flex: 1; min-width: 300px; line-height: 1.8; }
+.round-img, .founder-img { width: 100%; max-width: 400px; border-radius: 15px; border: 5px solid var(--gold); }
+
+.table-responsive { overflow-x: auto; margin-top: 20px; border-radius: 10px; }
+.donor-table { width: 100%; border-collapse: collapse; background: white; min-width: 500px; }
+.donor-table th { background: var(--maroon); color: white; padding: 15px; }
+.donor-table td { padding: 12px; border-bottom: 1px solid #ddd; text-align: center; }
+
+.main-container { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.form-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); flex: 1; min-width: 320px; }
+.form-row { display: flex; gap: 15px; }
+.input-group { position: relative; margin-bottom: 15px; flex: 1; }
+.input-group i { position: absolute; left: 12px; top: 12px; color: var(--maroon); }
+.input-group input, textarea { width: 100%; padding: 10px 10px 10px 40px; border: 1px solid #ddd; border-radius: 8px; outline: none; transition: 0.3s; }
+.input-group input:focus { border-color: var(--maroon); }
+
+.btn-primary { background: var(--maroon); color: white; padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; }
+.btn-primary:hover { background: #d38b1d; transform: translateY(-2px); }
+.btn-secondary { background: var(--dark); color: white; padding: 12px; border: none; border-radius: 8px; cursor: pointer; width: 100%; }
+
+.copyable { cursor: pointer; color: #007bff; text-decoration: underline; font-weight: bold; }
+.content-bank-info { text-align: left; line-height: 2; padding: 10px; background: #fffdf5; border-radius: 10px; }
+
+@media (max-width: 768px) {
+    .container { padding: 40px 5%; }
+    .form-row { flex-direction: column; gap: 0; }
+    .nav-links { display: none; }
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden; /* ထောင့်လေးတွေ ဝိုင်းသွားအောင် */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 300px; /* ဖုန်းမှာဆိုရင် အရပ်ကို နည်းနည်းလျှော့လိုက်ခြင်း */
+    }
+}
+
+.header-logo {
+    width: 200px; /* Logo အရွယ်အစားကို လိုသလို ညှိပါ */
+    height: auto;
+    border-radius: 95%;
+    object-fit: contain;
+}
+
+/* ဖုန်းနဲ့ကြည့်တဲ့အခါ ပုံစံမပျက်စေရန် */
+@media (max-width: 600px) {
+    .header-logo {
+        width: 50px;
+    }
+    .header-text h1 {
+        font-size: 18px;
+    }
+    .header-text p {
+        font-size: 12px;
+    }
+}
